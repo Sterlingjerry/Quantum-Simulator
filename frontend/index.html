@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quantum Gate Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Quantum Gate Simulator</h1>
+        <form id="simulator-form">
+            <label for="num-qubits">Number of Qubits (Up to 8):</label>
+            <input
+                type="number"
+                id="num-qubits"
+                name="num-qubits"
+                value="2"
+                min="1"
+                max="8"
+                required
+            />
+            <br />
+
+            <label for="gate-name">Gate (e.g., X, H, CNOT):</label>
+            <input
+                type="text"
+                id="gate-name"
+                name="gate-name"
+                placeholder="H"
+                autocomplete="off"
+            />
+            <br />
+
+            <label for="targets">Targets (comma-separated):</label>
+            <input
+                type="text"
+                id="targets"
+                name="targets"
+                placeholder="0,1"
+                autocomplete="off"
+            />
+            <br />
+
+            <label for="controls">Controls (comma-separated, for CNOT):</label>
+            <input
+                type="text"
+                id="controls"
+                name="controls"
+                placeholder="0"
+                autocomplete="off"
+            />
+            <br />
+
+            <div class="buttons">
+                <button type="button" id="add-gate">Add Gate</button>
+                <button type="submit" id="simulate">Simulate</button>
+                <button id="download-state">Download State Vector</button>
+                <button id="clear-gates">Clear Gates</button>
+            </div>
+        </form>
+
+        <h2>Gates Added:</h2>
+        <ul id="gate-list" class="gate-list"></ul>
+
+        <h2>Simulation Result:</h2>
+        <pre id="result" class="result"></pre>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
