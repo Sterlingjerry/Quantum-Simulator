@@ -8,7 +8,6 @@ from quantum_simulator import simulate_circuit
 
 app = FastAPI()
 
-# Enable CORS for local testing
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # for production, specify frontend domain
