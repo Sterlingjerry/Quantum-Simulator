@@ -7,7 +7,7 @@ const targetsInput = document.getElementById('targets');
 const controlsInput = document.getElementById('controls');
 const numQubitsInput = document.getElementById('num-qubits');
 
-let simulationData = null;  // To store the latest simulation result globally
+let simulationData = null;  
 
 document.getElementById('add-gate').addEventListener('click', () => {
     const gateName = gateNameInput.value.trim().toUpperCase();
